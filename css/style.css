@@ -1,22 +1,30 @@
 
 
-body{
+body, html{
     margin: 0;
+    height: 100%;
+    background-color: black;
 }
+
 .container {
     display: flex;
     flex-direction: column;
 }
 
 p {
-    color: white;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.blueShadow {
     text-shadow: 2px 2px 2px blue;
+    color: white;
 }
 
 h1{
     color: white;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder; 
+    text-shadow: 5px 5px 10px gray;
 }
 
 #activeLink{
@@ -29,26 +37,25 @@ h1{
 .header{
     height: 200px;
     width: 100%;
-    box-shadow: 5px 5px 10px rgb(237, 224, 224);
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow:10px 10px 20px rgba(70, 68, 68, 0.547);
 }
 #headerIMG{
     height: 100%; 
     width: 100%;
-    filter: blur(10px);
     z-index: -1;
 }
 
 .navbar{
+    z-index: 2;
     display:flex;
     align-items: center;
     justify-content: space-between;
     height: 100px;
     width: 100%;
-    background-color: black;;
 }
 .leftNavbar{
     display: flex;
@@ -65,12 +72,12 @@ h1{
 
 /*Allt under navbar*/
 .content {
+    z-index: 2;
     display: flex;
-    height: 500px;
+    height: 100%;
     width: 100%;
     align-items: center;
     flex-direction: column;
-    background-color: black;
 }
 
 /*Box med bilder och info*/
@@ -123,7 +130,7 @@ a {
     height: 100%;
     left: 50%;
     top: 0;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0);
     overflow: hidden;
 }
 
@@ -181,19 +188,82 @@ a {
 
 @-webkit-keyframes drop {
     0% {
-        top: -50%;
+        top: -10%;
     }
     100% {
-        top: 110%;
+        top: 150%;
     }
 }
 
 @keyframes drop {
     0% {
-        top: -50%;
+        top: -10%;
     }
     100% {
-        top: 110%;
+        top: 150%;
     }
 }
 /*----------------*/
+
+/*--Sport--*/
+
+.climbBackground {
+    width: 100%;
+    height: 100%;
+    background: url('/img/ClimbingBackground.jpg') center center no-repeat;
+    background-size: cover;
+    box-shadow: 0px 4px 4px 0px #00000040,inset 0 0 0 1000px rgba(0,0,0,.5);
+}
+
+/*Informationsruta och bilder*/
+.informationSection {
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* informationsruta */
+.informationBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 250px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgb(39, 46, 184) 0px 5px 15px;
+}
+
+/* bildruter */
+.pictureBox {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+}
+
+.pictures {
+    position: absolute;
+    box-shadow: rgb(39, 46, 184) 2px 3px 5px;
+    border-radius: 10px;
+    height: 150px;
+    width: 200px;
+}
+/*de olika ruternas placering*/
+.picture1 {
+    
+}
+
+.picture2 {
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.picture3 {
+    margin-top: 200px;
+}
